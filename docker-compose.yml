@@ -1,8 +1,9 @@
 services:
   gpt-researcher:
-    pull_policy: build
-    image: gptresearcher/gpt-researcher
-    build: ./
+    pull_policy: never              # ← FORCE local build only
+    build:
+      context: ./
+      dockerfile: ./Dockerfile      # ← Explicit path
     environment: 
       OPENAI_API_KEY: ${OPENAI_API_KEY}
       OPENAI_BASE_URL: ${OPENAI_BASE_URL}
