@@ -47,6 +47,17 @@ jsonpointer>=3.0.0
 jsonschema>=4.23.0
 jsonschema-specifications>=2025.4.1
 kiwisolver>=1.4.8
+
+# LangChain model integrations
+langchain-openai>=0.3.6          # OpenAI (GPT-4, etc)
+langchain-anthropic>=0.3.12      # Anthropic (Claude)
+langchain-google-genai>=0.0.14   # Google Gemini
+langchain-community>=0.3.17      # Community integrations (Qwen via Ollama)
+
+# For local Qwen models
+langchain-ollama>=0.3.3
+ollama>=0.4.8
+
 langchain-community>=0.3.17
 langchain-core>=0.3.61
 langchain-ollama>=0.3.3
