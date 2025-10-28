@@ -16,7 +16,7 @@ services:
     user: root
     restart: always
     ports:
-      - ${GPT-PORT}:8000
+      - ${GPT_PORT}:8000
       
   gptr-nextjs:
     pull_policy: build
@@ -37,7 +37,7 @@ services:
       - ./outputs:/app/outputs
     restart: always
     ports:
-      - ${NEXTJS-PORT}:3000
+      - ${NEXTJS_PORT}:3000
 
   gpt-researcher-tests:
     image: gptresearcher/gpt-researcher-tests
@@ -67,6 +67,6 @@ services:
       - ./docs/discord-bot:/app
       - /app/node_modules
     ports:
-      - ${DISCORD-PORT}:3000
+      - ${DISCORD_PORT}:3000
     profiles: ["discord"]
     restart: always
